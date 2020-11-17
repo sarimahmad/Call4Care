@@ -27,23 +27,23 @@ class Splash extends Component {
     const userDetail = await AsyncStorage.getItem(USERDETAIL);
     const token = await AsyncStorage.getItem(TOKEN);
     if (token === undefined || token === '' || token === null) {
-      this.props.navigation.navigate('LocationScreen');
+      this.props.navigation.navigate('TypeUser');
     } else if (
       userDetail === undefined ||
       userDetail === '' ||
       userDetail === null
     ) {
       this.props.setToken(token);
-      this.props.navigation.navigate('LocationScreen');
+      this.props.navigation.navigate('TypeUser');
     } else {
       if (JSON.parse(userDetail).isProfileCompleted) {
         this.props.setToken(token);
         this.props.alterJustUser(JSON.parse(userDetail));
-        this.props.navigation.navigate('LocationScreen');
+        this.props.navigation.navigate('TypeUser');
       } else {
         this.props.setToken(token);
         this.props.alterJustUser(JSON.parse(userDetail));
-        this.props.navigation.navigate('MainScreen');
+        this.props.navigation.navigate('TypeUser');
       }
     }
   };

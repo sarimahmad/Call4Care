@@ -2,6 +2,7 @@ import {Animated, Easing} from 'react-native';
 import {createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
+import TypeUser from '../screen/TypeUser';
 import Splash from '../screen/Splash';
 
 // https://github.com/react-community/react-navigation/issues/1254
@@ -17,6 +18,10 @@ const noTransitionConfig = () => ({
 const LoginStack = createStackNavigator({
   Splash: {
     screen: Splash,
+    navigationOptions: {headerShown: false, gestureEnabled: false},
+  },
+  TypeUser: {
+    screen: TypeUser,
     navigationOptions: {headerShown: false, gestureEnabled: false},
   },
 });
