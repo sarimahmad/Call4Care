@@ -44,7 +44,8 @@ class TypeUser extends Component {
               <TypeUserStyles.OptionWrapper
                 style={{borderTopLeftRadius: 10, borderTopRightRadius: 10}}>
                 <Icon size={50} color={BLACK.dark} name="doctor" />
-                <TypeUserStyles.ContinueBtn>
+                <TypeUserStyles.ContinueBtn
+                  onPress={() => this.props.navigation.navigate('DashBoard')}>
                   <TypeUserStyles.ContinueBtnText>
                     Continue as a {'\n'}Doctor/Clinic
                   </TypeUserStyles.ContinueBtnText>
@@ -56,7 +57,8 @@ class TypeUser extends Component {
                   borderBottomRightRadius: 10,
                 }}>
                 <Icon1 size={50} color={BLACK.dark} name="heartbeat" />
-                <TypeUserStyles.ContinueBtn>
+                <TypeUserStyles.ContinueBtn
+                  onPress={() => this.props.navigation.navigate('SignIn')}>
                   <TypeUserStyles.ContinueBtnText>
                     Continue for a Hospital
                   </TypeUserStyles.ContinueBtnText>

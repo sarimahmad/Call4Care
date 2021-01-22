@@ -116,6 +116,19 @@ export const DOB = {
     {label: '2020', value: '2020'},
   ],
 };
+export const PATIENT = [
+  {name: 'Abbo', age: '22', gender: 'Male', bloodGroup: 'O-ve', contactNo: '+256-12312312', email: 'Abbo@gmail.com'},
+  {name: 'Achen', age: '25', gender: 'Male', bloodGroup: 'AB-ve', contactNo: '+256-12312312', email: 'Achen@gmail.com'},
+  {name: 'Dembe', age: '32', gender: 'Male', bloodGroup: 'O+ve', contactNo: '+256-12312312', email: 'Dembe@gmail.com'},
+  {name: 'Miremba', age: '42', gender: 'Male', bloodGroup: 'A+ve', contactNo: '+256-12312312', email: 'Miremba@gmail.com'},
+  {name: 'Namazzi', age: '21', gender: 'Male', bloodGroup: 'AB+ve', contactNo: '+256-12312312', email: 'Namazzi@gmail.com'},
+  {name: 'Namono', age: '42', gender: 'Male', bloodGroup: 'O-ve', contactNo: '+256-12312312', email: 'Namono@gmail.com'},
+  {name: 'Nasiche', age: '52', gender: 'Male', bloodGroup: 'B-ve', contactNo: '+256-12312312', email: 'Nasiche@gmail.com'},
+  {name: 'Nresko', age: '26', gender: 'Male', bloodGroup: 'B+ve', contactNo: '+256-12312312', email: 'nresko@gmail.com'},
+  {name: 'Akiki', age: '62', gender: 'Male', bloodGroup: 'O-ve', contactNo: '+256-12312312', email: 'Akiki@gmail.com'},
+  {name: 'Mukisa', age: '34', gender: 'Male', bloodGroup: 'B-ve', contactNo: '+256-12312312', email: 'Mukisa@gmail.com'},
+];
+
 export const TOKEN = 'TOKENSAVE';
 export const USERDETAIL = 'USERDETAIL';
 export const isIphoneXorAbove =
