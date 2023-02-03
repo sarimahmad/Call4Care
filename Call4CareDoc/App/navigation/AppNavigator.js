@@ -34,6 +34,11 @@ import Splash from '../screen/Splash';
 import TypeUser from '../screen/TypeUser';
 import QAndA from '../screen/QAndA';
 import Logs from '../screen/Logs';
+import PatientReport from '../screen/Report/PatientReport/PatientReport';
+import IncomeReport from '../screen/Report/IcomeReport/IncomeReport';
+import DiscountReport from '../screen/Report/DiscountReport/DiscountReport';
+import AppointmentsReport from '../screen/Report/AppointmentsReport/AppointmentsReports';
+import AmountDueReport from '../screen/Report/AmountDueReport/AmountDueReport'
 
 import {FONT, SCREEN} from '../helper/Constant';
 import {BLACK, PURPLE, RED, WHITE} from '../helper/Color';
@@ -120,7 +125,7 @@ const _renderReport = (
       {open && (
         <View style={{width: SCREEN.width - 50, paddingLeft: 10}}>
           <TouchableOpacity
-            onPress={() => selectOpen(!open)}
+            onPress={() => props.navigation.navigate("PatientReport")}
             style={{
               height: 40,
               alignItems: 'center',
@@ -139,7 +144,7 @@ const _renderReport = (
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => selectOpen(!open)}
+            onPress={() => props.navigation.navigate('DiscountReport')}
             style={{
               height: 40,
               alignItems: 'center',
@@ -158,7 +163,7 @@ const _renderReport = (
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => selectOpen(!open)}
+            onPress={() => props.navigation.navigate("IncomeReport")}
             style={{
               height: 40,
               alignItems: 'center',
@@ -177,7 +182,7 @@ const _renderReport = (
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => selectOpen(!open)}
+            onPress={() => props.navigation.navigate('AppointmentsReport')}
             style={{
               height: 40,
               alignItems: 'center',
@@ -196,7 +201,7 @@ const _renderReport = (
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
-            onPress={() => selectOpen(!open)}
+            onPress={() => props.navigation.navigate('AmountDueReport')}
             style={{
               height: 40,
               alignItems: 'center',
@@ -547,6 +552,7 @@ const AppDrawerNavigator = createDrawerNavigator(
 
 // login stack
 const LoginStack = createStackNavigator({
+
   Splash: {
     screen: Splash,
     navigationOptions: {headerShown: false, gestureEnabled: false},
@@ -602,10 +608,32 @@ const LoginStack = createStackNavigator({
 });
 
 const MainApp = createStackNavigator({
+
   Home: {
     screen: AppDrawerNavigator,
     navigationOptions: {headerShown: false, gestureEnabled: false},
   },
+  PatientReport: {
+    screen: PatientReport,
+    navigationOptions: {headerShown: false, gestureEnabled: false},
+  },
+  IncomeReport: {
+    screen: IncomeReport,
+    navigationOptions: {headerShown: false, gestureEnabled: false},
+  },
+  DiscountReport: {
+    screen: DiscountReport,
+    navigationOptions: {headerShown: false, gestureEnabled: false},
+  },
+  AppointmentsReport: {
+    screen: AppointmentsReport,
+    navigationOptions: {headerShown: false, gestureEnabled: false},
+  },
+  AmountDueReport: {
+    screen: AmountDueReport,
+    navigationOptions: {headerShown: false, gestureEnabled: false},
+  },
+
 });
 
 // eslint-disable-next-line no-undef
